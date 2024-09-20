@@ -29,9 +29,10 @@ export async function getStaticProps({ params }) {
   console.log(`Fetching blog post for slug: ${params.slug}`);
 
   const response = await fetch(
+    // `http://localhost:3000/api/blog/${params.slug}`);
     `${process.env.NEXT_PUBLIC_API_URL}/api/blog/${params.slug}`
-    // `http://localhost:3000/api/blog/${params.slug}`
   );
+
   if (!response.ok) {
     console.error("Failed to fetch blog post:", response.statusText);
     return { props: { post: null } };
@@ -50,8 +51,8 @@ export async function getStaticPaths() {
     console.log("Fetching blog slugs...");
 
     const response = await fetch(
+      // "http://localhost:3000/api/blog-slugs");
       `${process.env.NEXT_PUBLIC_API_URL}/api/blog-slugs`
-      // "http://localhost:3000/api/blog-slugs"
     );
 
     if (!response.ok) {
