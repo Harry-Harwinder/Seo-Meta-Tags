@@ -1,40 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SEO Meta Tags Project
+
+This is a Next.js project that demonstrates how to implement SEO meta tags dynamically for blog posts. It includes API routes for fetching blog post data and slugs.
+
+## Features
+
+- Dynamic SEO meta tags based on blog post content
+- Static generation of blog post pages
+- API routes for fetching blog data
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v14 or later)
+- npm (Node Package Manager)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. **Clone the repository**:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+   ```bash
+   git clone https://github.com/your-username/seo-meta-tags.git
+   cd seo-meta-tags
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. **Install Dependenices**:
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Start the Development Server: Run the Next.js development server:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. **Test the API for Blog Slugs:**
 
-## Deploy on Vercel
+   Visit http://localhost:3000/api/blog-slugs to check if the API returns the list of blog slugs.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. **Test the API for Blog Post Data:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Visit http://localhost:3000/api/blog/seo-optimization to check if the API returns the blog post data for the specific slug.
+
+6. **Test the Blog Post Page:**
+
+Visit http://localhost:3000/blog/seo-optimization to see if the blog post is rendered properly with the SEO meta tags.
